@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ft-sdk-1.2.3-alpha02-sources">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/libs/ft-sdk-1.2.3-alpha02-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ft-plugin-1.0.2-alpha03">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/ft-plugin-1.0.2-alpha03.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

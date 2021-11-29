@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ft-native-1.0.0-alpha04">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/libs/ft-native-1.0.0-alpha04.jar!/" />
+    </SOURCES>
+  </library>
+</component>
