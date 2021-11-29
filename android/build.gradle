@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://mvnrepo.jiagouyun.com/repository/maven-releases'
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.1'
+    }
+}
+
+
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+
+
+dependencies {
+
+    implementation 'com.facebook.react:react-native:+'
+
+    //添加 DataFlux SDK 的依赖
+    api 'com.cloudcare.ft.mobile.sdk.tracker.agent:ft-sdk:1.2.3-alpha02'
+    //捕获 native 层崩溃信息的依赖，需要配合 ft-sdk 使用不能单独使用
+    api 'com.cloudcare.ft.mobile.sdk.tracker.agent:ft-native:1.0.0-alpha04'
+    //推荐使用这个版本，其他版本未做过充分兼容测试
+    api 'com.google.code.gson:gson:2.8.5'
+}
