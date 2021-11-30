@@ -1,6 +1,6 @@
 
 {
-  "name": "react-native-yuque",
+  "name": "react-native-datakit",
   "version": "1.0.0",
   "description": "A ReactNative yuque Component for android and iOS",
   "main": "index.js",
@@ -9,8 +9,8 @@
   },
   "keywords": [
     "react-native",
-    "yuque",
-    "react-native-yuque"
+    "datakit",
+    "react-native-datakit"
   ],
   "author": "",
   "license": "MIT",
