@@ -5,34 +5,29 @@
 
 `$ npm install react-native-yuque --save`
 
-### Mostly automatic installation
 
-`$ react-native link react-native-yuque`
 
 ### Manual installation
 
 
 #### iOS
 
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-yuque` and add `RNYuque.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNYuque.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+1. In Project and cd ios and pod install 
+
 
 #### Android
 
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.quenice.cardview.RNYuquePackage;` to the imports at the top of the file
-  - Add `new RNYuquePackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-yuque'
-  	project(':react-native-yuque').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-yuque/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-yuque')
-  	```
+1. Append the following lines to `android/build.gradle`:
+  	 allprojects {
+      repositories {
+       ##省略其他代码
+        maven {
+            url 'https://mvnrepo.jiagouyun.com/repository/maven-releases'
+        }
+    }
+}
+
+
 
 
 ## Usage
