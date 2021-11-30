@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "fatboy" => "fatboy_2020@163.com" }
   s.platform     = :ios, "11.0"
-  s.source       = { :git => "git@github.com:fatboy-hard/react-native-yuque.git", :tag => "main" }
+  s.source       = { :git => "git@github.com:fatboy-hard/react-native-datakit.git", :tag => "main" }
   #"ios/FTMobileSDK/**/*.{h,m}","ios/FTMobileSDK/FTMobileExtension/Info.{plist}"
   s.source_files  = "ios/RNYuque.{h,m}","sh}"
   s.requires_arc = true
