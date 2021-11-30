@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
   s.homepage     = "http://220.167.101.49:8092/fat_boy/YuQue"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-  s.author             = { "author" => "author@domain.cn" }
+  s.author             = { "fatboy" => "fatboy_2020@163.com" }
   s.platform     = :ios, "11.0"
-  s.source       = { :git => "ssh://git@220.167.101.49:18389/fat_boy/YuQue.git", :tag => "master" }
+  s.source       = { :git => "git@github.com:fatboy-hard/react-native-yuque.git", :tag => "main" }
   #"ios/FTMobileSDK/**/*.{h,m}","ios/FTMobileSDK/FTMobileExtension/Info.{plist}"
   s.source_files  = "ios/RNYuque.{h,m}","sh}"
   s.requires_arc = true
