@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "lib": ["es2017"],
+    "declarationMap": true,
+    "module": "commonjs",
+    "target": "es6",
+    "declarationDir": "./dist",
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "strict": true
+  },
+  "exclude": ["node_modules", "android", "ios"]
+}

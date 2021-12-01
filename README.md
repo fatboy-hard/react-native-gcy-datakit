@@ -3,7 +3,7 @@
 
 ## Getting started
 
-`$ npm install react-native-yuque --save`
+`$ npm install react-native-gcy-datakit --save`
 
 
 
@@ -32,7 +32,7 @@
 
 ## Usage
 ```javascript
-import RNYuque from 'react-native-yuque';
+import RNYuque from 'react-native-gcy-datakit';
 
 // TODO: What to do with the module?
 RNYuque;
