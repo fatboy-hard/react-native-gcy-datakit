@@ -1,6 +1,6 @@
 import { NativeModules } from 'react-native';
 
-const { RNGuanceyun } = NativeModules;
+const { RNYuque } = NativeModules;
 
 /**
  * 
@@ -10,7 +10,7 @@ const { RNGuanceyun } = NativeModules;
  * @param isDebug : 是否为debug
  */
 export function initFTSDK(url: string, appid: string, trackValue: string = "", isDebug: boolean = true) {
-    RNGuanceyun.initFTSDK(url, appid, trackValue, isDebug)
+    RNYuque.initFTSDK(url, appid, trackValue, isDebug)
 }
 
 /**
@@ -21,7 +21,7 @@ export function initFTSDK(url: string, appid: string, trackValue: string = "", i
  * @param isDebug    ///在debug环境下,设置为YES
 */
 export function init(metricsUrl: string, env = 3, isDebug = true) {
-    RNGuanceyun.init(metricsUrl, env, isDebug)
+    RNYuque.init(metricsUrl, env, isDebug)
 }
 
 /**
@@ -34,7 +34,7 @@ export function init(metricsUrl: string, env = 3, isDebug = true) {
  * @param isAction 设置是否追踪用户操作
  */
 export function startRum(appid: string, isANR = true, isCrash = true, isFreeze = true, isAction = true) {
-    RNGuanceyun.startRum(appid, isANR, isCrash, isFreeze, isAction)
+    RNYuque.startRum(appid, isANR, isCrash, isFreeze, isAction)
 }
 
 /**
@@ -45,16 +45,16 @@ export function startRum(appid: string, isANR = true, isCrash = true, isFreeze =
  * @param isConsole 是否允许上传自定义 log
  */
 export function startLogger(isCustom = true, isRum = true, isConsole = true) {
-    RNGuanceyun.startLogger(isCustom, isRum, isConsole)
+    RNYuque.startLogger(isCustom, isRum, isConsole)
 
 }
 
- /**
- * Trace配置
- *
- * @param type  默认为 DDTrace，目前支持 Zipkin :1, Jaeger:2, DDTrace :0
- * @param isRum 是否将 Trace 数据与 rum 关联
- */
+/**
+* Trace配置
+*
+* @param type  默认为 DDTrace，目前支持 Zipkin :1, Jaeger:2, DDTrace :0
+* @param isRum 是否将 Trace 数据与 rum 关联
+*/
 export function startTrace(type = 2, isRum = true) {
-    RNGuanceyun.startTrace(type, isRum)
+    RNYuque.startTrace(type, isRum)
 }

@@ -1,12 +1,12 @@
 {
   "name": "react-native-gcy-datakit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A ReactNative yuque Component for android and iOS",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prerelease": "tsc --build watch"
+    "prerelease": "tsc --build"
   },
   "keywords": [
     "react-native",

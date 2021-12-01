@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.startTrace = exports.startLogger = exports.startRum = exports.init = exports.initFTSDK = void 0;
 const react_native_1 = require("react-native");
-const { RNGuanceyun } = react_native_1.NativeModules;
+const { RNYuque } = react_native_1.NativeModules;
 /**
  *
  * @param url : Datakit 安装地址
@@ -11,7 +11,7 @@ const { RNGuanceyun } = react_native_1.NativeModules;
  * @param isDebug : 是否为debug
  */
 function initFTSDK(url, appid, trackValue = "", isDebug = true) {
-    RNGuanceyun.initFTSDK(url, appid, trackValue, isDebug);
+    RNYuque.initFTSDK(url, appid, trackValue, isDebug);
 }
 exports.initFTSDK = initFTSDK;
 /**
@@ -22,7 +22,7 @@ exports.initFTSDK = initFTSDK;
  * @param isDebug    ///在debug环境下,设置为YES
 */
 function init(metricsUrl, env = 3, isDebug = true) {
-    RNGuanceyun.init(metricsUrl, env, isDebug);
+    RNYuque.init(metricsUrl, env, isDebug);
 }
 exports.init = init;
 /**
@@ -35,7 +35,7 @@ exports.init = init;
  * @param isAction 设置是否追踪用户操作
  */
 function startRum(appid, isANR = true, isCrash = true, isFreeze = true, isAction = true) {
-    RNGuanceyun.startRum(appid, isANR, isCrash, isFreeze, isAction);
+    RNYuque.startRum(appid, isANR, isCrash, isFreeze, isAction);
 }
 exports.startRum = startRum;
 /**
@@ -46,7 +46,7 @@ exports.startRum = startRum;
  * @param isConsole 是否允许上传自定义 log
  */
 function startLogger(isCustom = true, isRum = true, isConsole = true) {
-    RNGuanceyun.startLogger(isCustom, isRum, isConsole);
+    RNYuque.startLogger(isCustom, isRum, isConsole);
 }
 exports.startLogger = startLogger;
 /**
@@ -56,6 +56,6 @@ exports.startLogger = startLogger;
 * @param isRum 是否将 Trace 数据与 rum 关联
 */
 function startTrace(type = 2, isRum = true) {
-    RNGuanceyun.startTrace(type, isRum);
+    RNYuque.startTrace(type, isRum);
 }
 exports.startTrace = startTrace;
