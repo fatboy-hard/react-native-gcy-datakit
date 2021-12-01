@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A ReactNative yuque Component for android and iOS",
   "main": "dist/index.js",
-  "lib": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prerelease": "tsc --build watch"
