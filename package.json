@@ -1,6 +1,6 @@
 
 {
-  "name": "react-native-datakit",
+  "name": "react-native-gcy-datakit",
   "version": "1.0.0",
   "description": "A ReactNative yuque Component for android and iOS",
   "main": "index.js",
@@ -10,7 +10,7 @@
   "keywords": [
     "react-native",
     "datakit",
-    "react-native-datakit"
+    "react-native-gcy-datakit"
   ],
   "author": "",
   "license": "MIT",
