@@ -110,14 +110,14 @@ public class RNYuqueModule extends ReactContextBaseJavaModule {
 
     //SDK 初始化 默认配置
     @ReactMethod
-    public void initFTSDK(String serverUrl, String AppId, String trackId, boolean isDebug) {
+    public void initFTSDK(String serverUrl, String AppId, String trackId, boolean isDebug,EnvType env) {
 
         //基础参数配置
         FTSDKConfig ftSDKConfig = FTSDKConfig.builder(serverUrl)////Datakit 安装地址
                 .setXDataKitUUID("ft-dataKit-uuid-001")
-                .setUseOAID(true)//设置 OAID 是否可用
+                .setUseOAID(false)//设置 OAID 是否可用
                 .setDebug(isDebug)//设置是否是 debug
-                .setEnv(EnvType.GRAY);
+                .setEnv(env);
         FTSdk.install(ftSDKConfig);
 
         //Log配置

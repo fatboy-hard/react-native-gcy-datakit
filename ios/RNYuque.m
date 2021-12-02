@@ -11,10 +11,12 @@ RCT_EXPORT_MODULE()
 RCT_REMAP_METHOD(initFTSDK,withMetricsUrl:(NSString *)url
                   appID:(NSString *)appid
                   trackId:(NSString *)trackId
-                  isDebug:(BOOL)isDebug){
+                  isDebug:(BOOL)isDebug
+                  env:(FTEnv)env){
     
         FTMobileConfig *config = [[FTMobileConfig alloc]initWithMetricsUrl:url];
-        config.enableSDKDebugLog = YES;
+        config.enableSDKDebugLog = isDebug;
+        config.env = env;
         //启动 SDK
         [FTMobileAgent startWithConfigOptions:config];
         
@@ -115,7 +117,7 @@ RCT_REMAP_METHOD(startLogger,withCustomLog:(BOOL)isCustom
  *@param
  *networkTraceType: Zipkin:0  Jaeger:1 DDtrace:2
  */
-RCT_REMAP_METHOD(startTrace,withTraceType:(int)type
+RCT_REMAP_METHOD(startTrace,withTraceType:(FTNetworkTraceType)type
                   enableLinkRumData:(BOOL)isRum){
     FTTraceConfig *traceConfig = [[FTTraceConfig alloc]init];
     /**

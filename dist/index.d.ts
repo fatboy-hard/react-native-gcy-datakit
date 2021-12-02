@@ -5,7 +5,7 @@
  * @param trackId : // 添加标签数据，用于用户监测数据源区分，如果需要使用追踪功能，则参数 key 为 track_id ,value 为任意数值
  * @param isDebug : 是否为debug
  */
-export declare function initFTSDK(url: string, appid: string, trackValue?: string, isDebug?: boolean): void;
+export declare function initFTSDK(url: string, appid: string, trackValue?: string, isDebug?: boolean, env?: number): void;
 /**
  * SDK配置与调用
  *
