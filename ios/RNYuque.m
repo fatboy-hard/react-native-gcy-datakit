@@ -12,7 +12,7 @@ RCT_REMAP_METHOD(initFTSDK,withMetricsUrl:(NSString *)url
                   appID:(NSString *)appid
                   trackId:(NSString *)trackId
                   isDebug:(BOOL)isDebug
-                  env:(FTEnv)env){
+                  env:(int)env){
     
         FTMobileConfig *config = [[FTMobileConfig alloc]initWithMetricsUrl:url];
         config.enableSDKDebugLog = isDebug;
