@@ -1,5 +1,6 @@
 
 #import "RNYuque.h"
+#import <FTMobileSDK/FTMobileAgent.h>
 #import <FTMobileSDK/FTExternalDataManager.h>
 @implementation RNYuque
 
@@ -9,7 +10,7 @@ RCT_EXPORT_MODULE()
   return dispatch_get_main_queue();
 }
 RCT_REMAP_METHOD(onResume,withPageName:(NSString *)pageName
-                  viewReferrer:(NSString *)referrer{
+                  viewReferrer:(NSString *)referrer){
     ///loadDuration 加载时长 默认1s
     [[FTExternalDataManager sharedManager] startViewWithName:pageName viewReferrer:referrer loadDuration:@1000000000];
 }
@@ -36,6 +37,7 @@ RCT_REMAP_METHOD(initFTSDK,withMetricsUrl:(NSString *)url
         rumConfig.enableTrackAppANR = YES;
         rumConfig.enableTrackAppFreeze = YES;
         rumConfig.enableTraceUserAction = YES;
+        rumConfig.enableTraceUserView = NO;
         [[FTMobileAgent sharedInstance] startRumWithConfigOptions:rumConfig];
         
         //开启 logger
@@ -142,3 +144,4 @@ RCT_REMAP_METHOD(startTrace,withTraceType:(FTNetworkTraceType)type
 
 @end
   
+

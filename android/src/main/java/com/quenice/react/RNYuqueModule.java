@@ -10,6 +10,7 @@ import com.ft.sdk.FTSdk;
 import com.ft.sdk.FTTraceConfig;
 import com.ft.sdk.MonitorType;
 import com.ft.sdk.TraceType;
+import com.ft.sdk.FTRUMGlobalManager;
 
 public class RNYuqueModule extends ReactContextBaseJavaModule {
 
@@ -88,6 +89,7 @@ public class RNYuqueModule extends ReactContextBaseJavaModule {
                 .setEnableTrackAppUIBlock(isFreeze)
                 ///是否追踪用户操作
                 .setEnableTraceUserAction(isAction)
+
                 //.addGlobalContext("track_id", AccountUtils.getProperty(this, AccountUtils.TRACK_ID))
                 .addGlobalContext("custom_tag", "any tags")
                 .setExtraMonitorTypeWithError(MonitorType.ALL));
@@ -157,6 +159,7 @@ public class RNYuqueModule extends ReactContextBaseJavaModule {
                 .setEnableTrackAppANR(true)
                 .setEnableTrackAppCrash(true)
                 .setEnableTrackAppUIBlock(true)
+                .setEnableTraceUserView(false)
                 .addGlobalContext("track_id", trackId)
                 .addGlobalContext("custom_tag", "any tags")
                 .setExtraMonitorTypeWithError(MonitorType.ALL));
