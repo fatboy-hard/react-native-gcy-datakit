@@ -25,6 +25,26 @@ public class RNYuqueModule extends ReactContextBaseJavaModule {
         return "RNYuque";
     }
     /**
+     * 用户界面停留追踪
+     * @param pageName 停留页面名称
+     * @param referrer 父页面
+     */
+
+    @ReactMethod
+    public void  onResume(String pageName,String referrer){
+        FTRUMGlobalManager.get().startView(pageName,referrer);
+
+
+    }
+
+    /**
+     * 停止追踪用户
+     */
+    @ReactMethod
+    public  void  onPause(){
+        FTRUMGlobalManager.get().stopView();
+    }
+    /**
      * SDK配置与调用
      *
      * @param metricsUrl 数据上报地址

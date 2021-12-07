@@ -1,8 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.startTrace = exports.startLogger = exports.startRum = exports.init = exports.initFTSDK = void 0;
+exports.startTrace = exports.startLogger = exports.startRum = exports.init = exports.initFTSDK = exports.onPause = exports.onResume = void 0;
 const react_native_1 = require("react-native");
 const { RNYuque } = react_native_1.NativeModules;
+/**
+ *
+ * @param pageName 页面名称
+ * @param referrer 父级页面名称
+ */
+function onResume(pageName, referrer) {
+    RNYuque.onResume(pageName, referrer);
+}
+exports.onResume = onResume;
+/**
+ * 暂停追踪页面数据
+ */
+function onPause() {
+    RNYuque.onPause();
+}
+exports.onPause = onPause;
 /**
  *
  * @param url : Datakit 安装地址

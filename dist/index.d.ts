@@ -1,5 +1,15 @@
 /**
  *
+ * @param pageName 页面名称
+ * @param referrer 父级页面名称
+ */
+export declare function onResume(pageName: string, referrer: string): void;
+/**
+ * 暂停追踪页面数据
+ */
+export declare function onPause(): void;
+/**
+ *
  * @param url : Datakit 安装地址
  * @param appid 应用地址
  * @param trackId : // 添加标签数据，用于用户监测数据源区分，如果需要使用追踪功能，则参数 key 为 track_id ,value 为任意数值

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "RNYuque"
-  s.version      = "1.0.0"
+  s.version      = "2.0.0"
   s.summary      = "RNYuque"
   s.description  = <<-DESC
                   rn yuque
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.library = "resolv.9"
   s.dependency "React"
-  s.dependency "FTMobileSDK", "1.2.6-alpha.2"
+  s.dependency "FTMobileSDK","1.3.1-alpha.6"
 
 end
 
