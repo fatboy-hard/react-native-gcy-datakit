@@ -25,6 +25,23 @@ public class RNYuqueModule extends ReactContextBaseJavaModule {
     public String getName() {
         return "RNYuque";
     }
+
+    /**
+     * 此方法用于绑定用户
+     * @param ID 绑定用户ID
+     */
+    @ReactMethod
+    public  void  bindUser(String ID){
+        FTSdk.bindRumUserData(ID);
+    }
+
+    /**
+     * 退出登录使用此方法
+     */
+    @ReactMethod
+    public  void  logout(){
+        FTSdk.unbindRumUserData();
+    }
     /**
      * 用户界面停留追踪
      * @param pageName 停留页面名称

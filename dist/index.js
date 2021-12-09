@@ -1,8 +1,23 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.startTrace = exports.startLogger = exports.startRum = exports.init = exports.initFTSDK = exports.onPause = exports.onResume = void 0;
+exports.startTrace = exports.startLogger = exports.startRum = exports.init = exports.initFTSDK = exports.onPause = exports.onResume = exports.logout = exports.bindUser = void 0;
 const react_native_1 = require("react-native");
 const { RNYuque } = react_native_1.NativeModules;
+/**
+ * 绑定用户方法
+ * @param ID 用户ID
+ */
+function bindUser(ID) {
+    RNYuque.bindUser(ID);
+}
+exports.bindUser = bindUser;
+/**
+ * 退出登录时候使用
+ */
+function logout() {
+    RNYuque.logout();
+}
+exports.logout = logout;
 /**
  *
  * @param pageName 页面名称

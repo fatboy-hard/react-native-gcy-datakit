@@ -1,4 +1,13 @@
 /**
+ * 绑定用户方法
+ * @param ID 用户ID
+ */
+export declare function bindUser(ID: string): void;
+/**
+ * 退出登录时候使用
+ */
+export declare function logout(): void;
+/**
  *
  * @param pageName 页面名称
  * @param referrer 父级页面名称

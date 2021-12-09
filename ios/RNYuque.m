@@ -9,15 +9,37 @@ RCT_EXPORT_MODULE()
 {
   return dispatch_get_main_queue();
 }
+/**
+  * 此方法用于绑定用户
+  * @param ID 绑定用户ID
+  */
+RCT_REMAP_METHOD(bindUser, withID:(NSString *)ID){
+    [[FTMobileAgent sharedInstance] bindUserWithUserID:ID];
+}
+/**
+     * 退出登录使用此方法
+     */
+RCT_EXPORT_METHOD(logout){
+    [[FTMobileAgent sharedInstance] logout];
+}
+/**
+   * 用户界面停留追踪
+   * @param pageName 停留页面名称
+   * @param referrer 父页面
+   */
 RCT_REMAP_METHOD(onResume,withPageName:(NSString *)pageName
                   viewReferrer:(NSString *)referrer){
     ///loadDuration 加载时长 默认1s
     [[FTExternalDataManager sharedManager] startViewWithName:pageName viewReferrer:referrer loadDuration:@1000000000];
 }
+/**
+    * 停止追踪用户
+    */
 RCT_EXPORT_METHOD(onPause){
     
     [[FTExternalDataManager sharedManager] stopView];
 }
+//SDK 初始化 默认配置
 RCT_REMAP_METHOD(initFTSDK,withMetricsUrl:(NSString *)url
                   appID:(NSString *)appid
                   trackId:(NSString *)trackId

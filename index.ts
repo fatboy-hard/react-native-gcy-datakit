@@ -1,7 +1,19 @@
 import { NativeModules } from 'react-native';
 
 const { RNYuque } = NativeModules;
-
+/**
+ * 绑定用户方法
+ * @param ID 用户ID
+ */
+export function bindUser(ID: string) {
+    RNYuque.bindUser(ID)
+}
+/**
+ * 退出登录时候使用
+ */
+export function logout() {
+    RNYuque.logout()
+}
 /**
  * 
  * @param pageName 页面名称
